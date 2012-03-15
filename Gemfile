@@ -2,13 +2,12 @@ source "http://rubygems.org"
 
 gem "rails", "3.2.1"
 
-case ENV["DB"]
-when "sqlite" then gem "sqlite3"
-when "postgres" then gem "pg"
-else
-  # MySQL is the default options
-  gem "mysql2"
-end
+# Gitlab uses MySQL by default.
+# It is tested against Sqlite3 and Postgres as well,
+# so switching to another DB should not be a problem.
+gem "mysql2"
+# gem "sqlite3"
+# gem "pg"
 
 gem "rake"
 gem "devise"

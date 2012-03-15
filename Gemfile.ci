@@ -1,0 +1,12 @@
+case ENV["DB"]
+when "sqlite" then gem "sqlite3"
+when "postgres" then gem "pg"
+when "mysql2" then gem "mysql2"
+end
+
+def gem(*args)
+  # Override 'gem' method to block any other database gems in the 'real' Gemfile
+  super unless %w(pg sqlite3 mysql2).include?(args.first)
+end
+
+eval(IO.read(File.join(File.dirname(__FILE__), 'Gemfile')), binding)
