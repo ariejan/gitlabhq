@@ -2,8 +2,14 @@ source "http://rubygems.org"
 
 gem "rails", "3.2.1"
 
-gem "sqlite3"
-gem "mysql2"
+case ENV["DB"]
+when "sqlite" then gem "sqlite3"
+when "postgres" then gem "pg"
+else
+  # MySQL is the default options
+  gem "mysql2"
+end
+
 gem "rake"
 gem "devise"
 gem "stamp"

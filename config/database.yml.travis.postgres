@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: gitlabhq_test
+  username: postgres
