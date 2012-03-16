@@ -11,6 +11,18 @@ a {
   }
 }
 
+.btn { 
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), color-stop(25%, #f1f1f1), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#f1f1f1, #f1f1f1 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #f1f1f1, #f1f1f1 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#f1f1f1, #f1f1f1 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#f1f1f1, #f1f1f1 25%, #e6e6e6);
+  background-image: linear-gradient(#f1f1f1, #f1f1f1 25%, #e6e6e6);
+
+  &:hover { 
+  }
+}
+
 a:focus { 
   outline: none; 
 }
@@ -29,6 +41,18 @@ a:focus {
 
 .label { 
   background-color: #474D57;
+}
+
+.pretty_label { 
+  @include round-borders-all(4px);
+  padding:2px 4px;
+  background-image: -webkit-gradient(linear, 0 0, 0 26, color-stop(0.076, #fefefe), to(#F6F7F8));
+  background-image: -webkit-linear-gradient(#fefefe 7.6%, #F6F7F8);
+  background-image: -moz-linear-gradient(#fefefe 7.6%, #F6F7F8);
+  background-image: -o-linear-gradient(#fefefe 7.6%, #F6F7F8);
+  color: #777;
+  border: 1px solid #DEDFE1;
+
 }
 
 .tabs > li > a, .pills > li > a {
@@ -934,4 +958,8 @@ p.time {
   text-align: right;
   padding: 4px;
   margin: 2px;
+}
+
+.highlight_word { 
+  background:#EEDC94;
 }
