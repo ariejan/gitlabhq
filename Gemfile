@@ -10,7 +10,7 @@ gem "mysql2"
 # gem "pg"
 
 gem "rake"
-gem "devise"
+gem "devise", "~> 1.5.3"
 gem "stamp"
 gem "kaminari"
 gem "haml", "3.1.4"
